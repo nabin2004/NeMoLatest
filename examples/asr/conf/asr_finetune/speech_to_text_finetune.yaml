@@ -12,7 +12,7 @@ model:
   skip_nan_grad: false
 
   train_ds:
-    manifest_filepath: /kaggle/input/indic-conformer-nepali/pytorch/default/1/models/ne.nemo
+    manifest_filepath: /kaggle/working/fixed_train.json
     sample_rate: ${model.sample_rate}
     batch_size: 1
     shuffle: true
@@ -31,7 +31,7 @@ model:
     return_language_id: true 
 
   validation_ds:
-    manifest_filepath: /kaggle/input/wiseyak-voice-data/input-20250309T152930Z-001/input/validation_data/valid_manifest_with_ids.json
+    manifest_filepath: /kaggle/working/fixed_validation.json
     sample_rate: ${model.sample_rate}
     batch_size: 16
     language_ids: 0
@@ -43,7 +43,7 @@ model:
     return_language_id: true 
 
   test_ds:
-    manifest_filepath: /kaggle/input/wiseyak-voice-data/ne_np_female-20250309T152932Z-001/ne_np_female/test.json
+    manifest_filepath: /kaggle/working/fixed_test.json
     sample_rate: ${model.sample_rate}
     language_ids: 0
     batch_size: 16
