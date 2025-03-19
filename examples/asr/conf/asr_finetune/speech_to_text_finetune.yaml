@@ -12,7 +12,7 @@ model:
   skip_nan_grad: false
 
   train_ds:
-    manifest_filepath: /kaggle/input/d/nabinoli2004/dataset-2/DATASET_2/input/train_manifest_fixed.json
+    manifest_filepath: /kaggle/input/dataset/data_train.jsonl
     sample_rate: ${model.sample_rate}
     batch_size: 1
     shuffle: true
@@ -31,7 +31,7 @@ model:
     return_language_id: true 
 
   validation_ds:
-    manifest_filepath: /kaggle/input/d/nabinoli2004/dataset-2/DATASET_2/input/validation_data/valid_manifest_fixed.json
+    manifest_filepath: /kaggle/input/dataset/data_validation.jsonl
     sample_rate: ${model.sample_rate}
     batch_size: 16
     language_ids: 0
@@ -43,7 +43,7 @@ model:
     return_language_id: true 
 
   test_ds:
-    manifest_filepath: /kaggle/input/d/nabinoli2004/dataset-2/DATASET_2/ne_np_female/test.json
+    manifest_filepath: /kaggle/input/dataset/data_test.jsonl
     sample_rate: ${model.sample_rate}
     language_ids: 0
     batch_size: 16
