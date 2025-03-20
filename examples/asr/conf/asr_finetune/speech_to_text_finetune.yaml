@@ -4,6 +4,7 @@ name: "Speech_To_Text_Finetuning"
 # We do not currently support `init_from_ptl_ckpt` to create a single script for all types of models.
 init_from_nemo_model: "/kaggle/input/model-v2/other/default/1/ne.nemo"
 
+
 model:
   sample_rate: 16000
   compute_eval_loss: false # eval samples can be very long and exhaust memory. Disable computation of transducer loss during validation/testing with this flag.
@@ -104,6 +105,7 @@ trainer:
   enable_checkpointing: False  # Provided by exp_manager
   logger: false  # Provided by exp_manager
   benchmark: false # needs to be false for models with variable-length speech input as it slows down training
+  resume_from_checkpoint: "nemo_experiments/Speech_To_Text_Finetuning/2025-03-20_07-15-59/checkpoints/Speech_To_Text_Finetuning--val_wer=0.3628-epoch=10-last.ckpt"  
 
 
 exp_manager:
