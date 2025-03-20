@@ -3,7 +3,7 @@
 # Run Speech to Text fine-tuning using NeMo
 python3 examples/asr/speech_to_text_finetune.py \
 model.tokenizer.update_tokenizer=False \
-trainer.devices=1 \
+trainer.devices=-1 \
 trainer.accelerator="gpu" \
 trainer.max_epochs=10 
 # ++model.train_ds.use_semi_sorted_batching=true
